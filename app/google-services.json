@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "704718881608",
+    "firebase_url": "https://maua-chapchap.firebaseio.com",
+    "project_id": "maua-chapchap",
+    "storage_bucket": "maua-chapchap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704718881608:android:8f1c00205cfc9ba9",
+        "android_client_info": {
+          "package_name": "com.Maua_ChapChap.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704718881608-8tb57l42vd2fl5dpsolfr14diraosd7c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Maua_ChapChap.android",
+            "certificate_hash": "d4a84e7db0e277f5ae64d291999913d167d8c16d"
+          }
+        },
+        {
+          "client_id": "704718881608-b2uc6fr5tfk6942dj2fgogce8off3tra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTaDFYyggA72hqjOM6cXMCt-r0BNDBIIo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704718881608-b2uc6fr5tfk6942dj2fgogce8off3tra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
