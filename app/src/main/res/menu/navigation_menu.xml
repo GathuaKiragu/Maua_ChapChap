@@ -2,15 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nav_home"
+        android:icon="@drawable/house"
         android:title="Home" />
 
     <item android:id="@+id/nav_weddings"
+        android:icon="@drawable/wedding"
         android:title="Weddings" />
 
     <item android:id="@+id/nav_funeral"
+        android:icon="@drawable/funeral"
         android:title="Funeral" />
 
     <item android:id="@+id/nav_love"
+        android:icon="@drawable/bouquet"
         android:title="Love And Romance" />
 
 </menu>
