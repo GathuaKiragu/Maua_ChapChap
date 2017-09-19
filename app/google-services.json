@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "570247025635",
+    "firebase_url": "https://maua-chapchap-2fc5a.firebaseio.com",
+    "project_id": "maua-chapchap-2fc5a",
+    "storage_bucket": "maua-chapchap-2fc5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570247025635:android:6f938b733480b1df",
+        "android_client_info": {
+          "package_name": "com.example.kiragu.maua_chapchap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570247025635-rv50kgusaj2e5kvflohi3vp81e0ql953.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kiragu.maua_chapchap",
+            "certificate_hash": "3fdd00fdb2e69921531a7fae345cd9e47db21f83"
+          }
+        },
+        {
+          "client_id": "570247025635-48rb0p11068odhcc20eeaekug06r6uab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kiragu.maua_chapchap",
+            "certificate_hash": "d4a84e7db0e277f5ae64d291999913d167d8c16d"
+          }
+        },
+        {
+          "client_id": "570247025635-s8u5q4rm6uqmalos5nnbp6gjq7qhhsra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0_5apXsYX3cMq5Ur-hDP9Vxx_iA5UFg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570247025635-s8u5q4rm6uqmalos5nnbp6gjq7qhhsra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
