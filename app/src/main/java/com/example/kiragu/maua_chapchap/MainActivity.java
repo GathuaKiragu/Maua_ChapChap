@@ -21,6 +21,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     ListView mListView;
+    private ValueEventListener productsListener;
+    private DatabaseReference mProductsList;
+
 
 
     @Override
@@ -29,9 +32,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //  Firebase
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = database.getReference();
-        databaseReference.child("products").addValueEventListener(new ValueEventListener() {
+        mProductsList = FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child("products");
+        productsListener = mProductsList.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot locationSnapshot : dataSnapshot.getChildren()) {
@@ -45,5 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mProductsList.removeEventListener(productsListener);
     }
 }
