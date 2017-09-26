@@ -1,10 +1,11 @@
-package com.example.kiragu.maua_chapchap;
+package com.example.kiragu.maua_chapchap.Ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.kiragu.maua_chapchap.R;
 import com.example.kiragu.maua_chapchap.ViewHolders.FirebaseProductsViewHolder;
 import com.example.kiragu.maua_chapchap.model.Products;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

@@ -1,27 +1,19 @@
-package com.example.kiragu.maua_chapchap;
+package com.example.kiragu.maua_chapchap.Ui;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.kiragu.maua_chapchap.model.Products;
+import com.example.kiragu.maua_chapchap.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity {
