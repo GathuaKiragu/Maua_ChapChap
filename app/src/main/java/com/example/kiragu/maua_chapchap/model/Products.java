@@ -13,6 +13,8 @@ public class Products {
     public String description;
     public int price;
 
+
+//    Empty constractor for firebase database
     public Products() {
     }
 
@@ -43,30 +45,30 @@ public class Products {
     public String getImage() {
         return image;
     }
-    public void setImage(String image) {
-        this.image = image;
-    }
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
 
 //    Image
     public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+//    public void setQuantity(int quantity) {
+//        this.quantity = quantity;
+//    }
 //    Description
     public String getDescription() {
         return description;
     }
-    public void setDescription(String description) {
-        this.description = description;
-    }
+//    public void setDescription(String description) {
+//        this.description = description;
+//    }
 //Price
     public int getPrice() {
         return price;
     }
-    public void setPrice(int price) {
-        this.price = price;
-    }
+//    public void setPrice(int price) {
+//        this.price = price;
+//    }
 }

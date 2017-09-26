@@ -1,48 +1,67 @@
 package com.example.kiragu.maua_chapchap;
 
-import android.app.Activity;
-import android.view.LayoutInflater;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
+import com.example.kiragu.maua_chapchap.ViewHolders.FirebaseProductsViewHolder;
 import com.example.kiragu.maua_chapchap.model.Products;
-import java.util.List;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import org.parceler.Parcels;
+
+import java.util.ArrayList;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 /**
  * Created by gathua on 9/19/17.
  */
 
-public class ProductList extends ArrayAdapter<Products> {
-    private Activity context;
-    List<Products> products;
+public class ProductList extends AppCompatActivity{
+    private DatabaseReference mProductReference;
+    private FirebaseRecyclerAdapter mFirebaseAdapter;
 
-    public ProductList(Activity context, List<Products> products) {
-        super(context, R.layout.product_list, products);
-        this.context = context;
-        this.products = products;
-    }
-
+    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = context.getLayoutInflater();
-        View listViewItem = inflater.inflate(R.layout.product_list, null, true);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.product_list_activity);
+        ButterKnife.bind(this);
 
-        TextView productName = (TextView) listViewItem.findViewById(R.id.productNameTextView);
-        TextView description = (TextView) listViewItem.findViewById(R.id.descriptionTextView);
-        TextView price = (TextView) listViewItem.findViewById(R.id.priceTextView);
+        mProductReference = FirebaseDatabase.getInstance().getReference("products");
+        setUpFirebaseAdapter();
+    }
 
+    private void setUpFirebaseAdapter() {
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<Products, FirebaseProductsViewHolder>
+                (Products.class, R.layout.product_list_item, FirebaseProductsViewHolder.class,
+                        mProductReference) {
 
-        Products product = products.get(position);
-        productName.setText(product.getProduct_name());
-        description.setText(product.getDescription());
-        price.setText(product.getPrice());
+            @Override
+            protected void populateViewHolder(FirebaseProductsViewHolder viewHolder,
+                                              Products model, int position) {
+                viewHolder.bindProduct(model);
+            }
+        };
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(mFirebaseAdapter);
+    }
 
-
-
-        return listViewItem;
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mFirebaseAdapter.cleanup();
     }
 
 }
