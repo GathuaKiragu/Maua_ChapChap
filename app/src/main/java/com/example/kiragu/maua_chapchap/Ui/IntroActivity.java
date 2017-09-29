@@ -1,7 +1,9 @@
 package com.example.kiragu.maua_chapchap.Ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +21,14 @@ public class IntroActivity extends AppIntro {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
+//        declaring colors
+        int a = Color.parseColor("#6A1B9A");
+        int b = Color.parseColor("#D81B60");
+        int c = Color.parseColor("#EF5350");
+
+
         // Note here that we DO NOT use setContentView();
 
         // Add your slide fragments here.
@@ -30,15 +40,14 @@ public class IntroActivity extends AppIntro {
 
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        addSlide(AppIntroFragment.newInstance("Phancy Flowers", "Welcome to Phancy Flowers", R.drawable.logo , 000000));
-        addSlide(AppIntroFragment.newInstance("Phancy Flowers", "Welcome to Phancy Flowers", R.drawable.logo , 48220255));
-        addSlide(AppIntroFragment.newInstance("Phancy Flowers", "Welcome to Phancy Flowers", R.drawable.logo , 48255186));
-        addSlide(AppIntroFragment.newInstance("Phancy Flowers", "Welcome to Phancy Flowers", R.drawable.logo , 17925548));
+        addSlide(AppIntroFragment.newInstance("Phancy Flowers", "Welcome to Phancy Flowers", R.drawable.log1 , a));
+        addSlide(AppIntroFragment.newInstance("Delivery", "We delivery our products right at your door-step", R.drawable.logo2 , b));
+        addSlide(AppIntroFragment.newInstance("Gift Flowers", "Show love by getting a gift flower for your partner", R.drawable.gifts , c));
 
         // OPTIONAL METHODS
         // Override bar/separator color.
-        setBarColor(Color.parseColor("#3F51B5"));
-        setSeparatorColor(Color.parseColor("#2196F3"));
+//        setBarColor(Color.parseColor("#3F51B5"));
+//        setSeparatorColor(Color.parseColor("#2196F3"));
 
         // Hide Skip/Done button.
         showSkipButton(true);
@@ -48,6 +57,9 @@ public class IntroActivity extends AppIntro {
         // NOTE: you will probably need to ask VIBRATE permission in Manifest.
         setVibrate(true);
         setVibrateIntensity(30);
+
+        setSlideOverAnimation(); // OR
+
     }
 
     @Override
