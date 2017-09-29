@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".Ui.ProductList" />
         <activity android:name=".Ui.LoginActivity" />
-        <activity android:name=".Ui.SignUpActivity"></activity>
+        <activity android:name=".Ui.SignUpActivity" />
+        <activity android:name=".Ui.AppIntro" />
+        <activity android:name=".Ui.IntroActivity"></activity>
     </application>
 
 </manifest>
