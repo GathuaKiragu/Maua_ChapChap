@@ -6,7 +6,7 @@ package com.example.kiragu.maua_chapchap.model;
 
 public class Products {
 
-    public String product_name;
+    public String pName;
     public String category;
     public String image;
     public int quantity;
@@ -19,7 +19,7 @@ public class Products {
     }
 
     public Products(String product_name, String description, String category, String image, int quantity, int price) {
-        this.product_name = product_name;
+        this.pName = product_name;
         this.description = description;
         this.category = category;
         this.image = image;
@@ -28,10 +28,10 @@ public class Products {
     }
 
     public String getProduct_name() {
-        return product_name;
+        return pName;
     }
     public void setProduct_name(String product_name) {
-        this.product_name = product_name;
+        this.pName = product_name;
     }
 //    category
     public String getCategory() {

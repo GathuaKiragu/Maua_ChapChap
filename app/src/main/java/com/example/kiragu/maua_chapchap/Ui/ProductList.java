@@ -29,7 +29,8 @@ public class ProductList extends AppCompatActivity{
         setContentView(R.layout.product_list_activity);
         ButterKnife.bind(this);
 
-        mProductReference = FirebaseDatabase.getInstance().getReference("products");
+          mProductReference = FirebaseDatabase.getInstance().getReference("products");
+//        Query mQuery = mProductReference.orderByChild("timestamp");
         setUpFirebaseAdapter();
     }
 

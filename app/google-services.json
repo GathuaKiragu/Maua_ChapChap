@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "570247025635-31ppem5ihtjl3f0ph2qb8ttal25u16mm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kiragu.maua_chapchap",
+            "certificate_hash": "64afe457e5ccccb2b1da477a0afd9b49613bb89e"
+          }
+        },
+        {
           "client_id": "570247025635-rv50kgusaj2e5kvflohi3vp81e0ql953.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
