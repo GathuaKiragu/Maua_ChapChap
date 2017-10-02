@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,11 +8,26 @@
     tools:context="com.example.kiragu.maua_chapchap.Ui.MainActivity">
 
 
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+   />
+
+    <com.daimajia.slider.library.Indicators.PagerIndicator
+        android:id="@+id/custom_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="140dp" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="354dp"
+        android:layout_below="@+id/slider"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
+</RelativeLayout>
